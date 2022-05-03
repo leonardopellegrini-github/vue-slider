@@ -33,7 +33,6 @@ const app = new Vue({
         }
         ],
         counterPhoto: 0,
-        activeMenu: false
       },
 
     methods:{
@@ -49,6 +48,10 @@ const app = new Vue({
                 this.counterPhoto = this.slides.length - 1;
             }
             
+        },
+        
+        cambiaImmagine(questo){
+            questo = this.counterPhoto;
         }
     
     }

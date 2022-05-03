@@ -29,10 +29,14 @@
                 <div class="thumbs">
                     <div @click="avanti()" class="prev"></div>
                     <div @click="indietro()" class="next"></div>
-                    <div class="thumb" >
-                        <img src="img/01.jpg" alt="Svezia"/>
+
+                    <div @click="cambiaImmagine(questo)" class="thumb" v-for="(slide, counterPhoto) in slides"  :class=" 'active' " >
+
+                        <img :src="slides[counterPhoto].image" alt="slides[counterPhoto].title"/>
+
                     </div>
-                    <div class="thumb active">
+                    <!--
+                    <div @click="attiva()" class="thumb active">
                         <img src="img/02.jpg" alt="Svizzera" />
                     </div>
                     <div class="thumb">
@@ -44,6 +48,7 @@
                     <div class="thumb">
                         <img src="img/05.jpg" alt="Paradise" />
                     </div>
+                    -->
                 </div>
 
             </div>
