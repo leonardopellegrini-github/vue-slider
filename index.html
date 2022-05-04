@@ -30,9 +30,17 @@
                     <div @click="avanti()" class="prev"></div>
                     <div @click="indietro()" class="next"></div>
 
-                    <div @click="cambiaImmagine(questo)" class="thumb" v-for="(slide, counterPhoto) in slides"  :class=" 'active' " >
+                    <div class="thumb" 
+                    v-for="(slide, index) in slides"
+                    :class="{ 'active' : index === counterPhoto}"
+                    @click="cambiaSlide(index)" 
+                    >
 
-                        <img :src="slides[counterPhoto].image" alt="slides[counterPhoto].title"/>
+                        <img 
+                        :src="slide.image" 
+                        alt="slide.title"
+                        @click="counterPhoto = index"
+                        />
 
                     </div>
                     <!--

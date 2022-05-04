@@ -50,9 +50,6 @@ const app = new Vue({
             
         },
         
-        cambiaImmagine(questo){
-            questo = this.counterPhoto;
-        }
     
     }
       
